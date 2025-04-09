@@ -6,13 +6,16 @@ import {Route
 import HomePage from './pages/HomePage';
 import Jobs from './pages/Jobs.jsx';
 import MainLayout from './layouts/MainLayout.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 import React from 'react'
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
   <Route path='/' element={<MainLayout/>}>
     <Route index element={<HomePage/>} />
     <Route path='/jobs' element={<Jobs/>} />
+    <Route path='*' element={<NotFoundPage/>} />
   </Route>  
   )
 );
